@@ -1,3 +1,4 @@
+import 'package:expense_tracker_app/ExpensesTracker/Widgets/add_transaction.dart';
 import 'package:flutter/material.dart';
 
 class Homescreen extends StatefulWidget {
@@ -12,7 +13,12 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (_) => AddTransaction(),
+          );
+        },
         child: Icon(Icons.add),
       ),
       appBar: AppBar(title: Text("Expenses Tracker")),

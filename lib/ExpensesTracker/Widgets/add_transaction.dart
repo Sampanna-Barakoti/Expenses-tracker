@@ -1,4 +1,6 @@
+import 'package:expense_tracker_app/ExpensesTracker/Provider/transaction_provier.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class AddTransaction extends StatefulWidget {
   const AddTransaction({super.key});
@@ -15,6 +17,13 @@ class _AddTransactionState extends State<AddTransaction> {
   void submitData() {
     final title = _titleController.text;
     final amount = double.tryParse(_amountController.text) ?? 0;
+
+    if (title.isEmpty && amount <= 0) return;
+    Provider.of<TransactionProvier>(
+      context,
+      listen: false,
+    ).addTransaction(title, amount, _isIncome);
+    Navigator.pop(context);
   }
 
   @override
@@ -57,7 +66,8 @@ class _AddTransactionState extends State<AddTransaction> {
               ),
             ],
           ),
-          ElevatedButton(onPressed: () {}, child: Text("Add")),
+          SizedBox(height: 20),
+          ElevatedButton(onPressed: submitData, child: Text("Add Transaction")),
         ],
       ),
     );

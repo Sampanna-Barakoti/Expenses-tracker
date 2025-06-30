@@ -18,10 +18,4 @@ A simple and clean Expense Tracker application built using **Flutter** and **Pro
 - **Dart** – Programming language
 - **Material UI** – UI components
 
-## 📸 Screenshots
-
-| Home Page | Add Expense | Expense List |
-|-----------|-------------|---------------|
-| ![Home](screenshots/home.png) | ![Add](screenshots/add.png) | ![List](screenshots/list.png) |
-
 

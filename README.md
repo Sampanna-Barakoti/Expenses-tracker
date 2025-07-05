@@ -8,8 +8,6 @@ A simple and clean Expense Tracker application built using **Flutter** and **Pro
 - 📊 View total balance, income, and expenses
 - 🧾 Categorized expense list
 - ⏱ Real-time UI updates with Provider
-- 🌙 Light & dark mode (optional)
-- 📅 Date-based filtering and sorting
 
 ## 🛠 Tech Stack
 
